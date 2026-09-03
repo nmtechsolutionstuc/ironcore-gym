@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IRONCORE PERFORMANCE — Fuerza. Disciplina. Transformación.</title>
+<meta name="description" content="IronCore Performance es un gimnasio premium de fuerza y rendimiento en Buenos Aires. Coaching experto, programación inteligente y una comunidad que te empuja hacia adelante.">
+
+<meta property="og:title" content="IRONCORE PERFORMANCE">
+<meta property="og:description" content="Construí la versión más fuerte de vos. Entrenamiento de alto rendimiento pensado para hacerte más fuerte, más rápido y más capaz.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1770513649465-2c60c8039806?w=1200&q=80&auto=format&fit=crop">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%230B0B0B'/%3E%3Ctext x='32' y='44' font-family='Arial Black, sans-serif' font-size='30' font-weight='900' fill='%23D7FF3F' text-anchor='middle'%3EIC%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+<!-- ======================= NAVBAR ======================= -->
+<header class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="#home" class="navbar__logo">IRON<span>CORE</span></a>
+
+    <nav class="navbar__nav" aria-label="Principal">
+      <a href="#home">Inicio</a>
+      <a href="#training">Entrenamiento</a>
+      <a href="#coaches">Coaches</a>
+      <a href="#membership">Membresías</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+
+    <a href="#membership" class="navbar__cta">Sumate Ya</a>
+
+    <button class="navbar__burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ======================= MOBILE NAV ======================= -->
+<div class="mobile-nav" id="mobileNav">
+  <nav aria-label="Menú móvil">
+    <a href="#home" style="--i:0">Inicio</a>
+    <a href="#training" style="--i:1">Entrenamiento</a>
+    <a href="#coaches" style="--i:2">Coaches</a>
+    <a href="#membership" style="--i:3">Membresías</a>
+    <a href="#contact" style="--i:4">Contacto</a>
+  </nav>
+  <a href="#membership" class="mobile-nav__cta">Sumate Ya</a>
+</div>
+
+<main id="main">
+
+<!-- ======================= HERO ======================= -->
+<section class="hero" id="home">
+  <div class="hero__media">
+    <img
+      src="https://images.unsplash.com/photo-1770513649465-2c60c8039806?w=1920&q=80&auto=format&fit=crop"
+      alt="Atleta completando un levantamiento pesado de barra dentro de un gimnasio oscuro de alto rendimiento"
+      class="hero__img"
+      id="heroImg"
+      fetchpriority="high">
+    <div class="hero__overlay"></div>
+    <div class="hero__grain"></div>
+  </div>
+
+  <div class="hero__content">
+    <h1 class="hero__headline" id="heroHeadline">
+      <span class="line"><span class="word">CONSTRUÍ</span></span>
+      <span class="line"><span class="word">LA VERSIÓN</span></span>
+      <span class="line"><span class="word word--accent">MÁS FUERTE</span></span>
+      <span class="line"><span class="word">DE VOS.</span></span>
+    </h1>
+
+    <p class="hero__subtext" data-anim="fade-up">Entrenamiento de alto rendimiento pensado para hacerte más fuerte, más rápido y más capaz.</p>
+
+    <div class="hero__ctas" data-anim="fade-up">
+      <a href="#membership" class="btn btn--accent">Empezá a Entrenar</a>
+      <a href="#training" class="btn btn--ghost">Ver Programas</a>
+    </div>
+  </div>
+
+  <div class="hero__stats" data-anim="fade-up">
+    <div class="hero__stat"><span class="hero__stat-num">+500</span><span class="hero__stat-label">Socios</span></div>
+    <div class="hero__stat-divider"></div>
+    <div class="hero__stat"><span class="hero__stat-num">12</span><span class="hero__stat-label">Coaches</span></div>
+    <div class="hero__stat-divider"></div>
+    <div class="hero__stat"><span class="hero__stat-num">7</span><span class="hero__stat-label">Días a la Semana</span></div>
+  </div>
+
+  <div class="hero__scroll" aria-hidden="true"><span></span>Scroll</div>
+</section>
+
+<!-- ======================= PHILOSOPHY ======================= -->
+<section class="philosophy" id="philosophy">
+  <div class="philosophy__grid">
+    <div class="philosophy__text" data-reveal>
+      <span class="eyebrow">01 — Filosofía</span>
+      <h2 class="philosophy__title">ESTO ES MÁS<br>QUE UN GIMNASIO.</h2>
+      <p class="philosophy__body">IronCore está pensado para quienes quieren más de su entrenamiento. Coaching experto, programación inteligente y una comunidad que te empuja para adelante.</p>
+      <a href="#training" class="text-link">Mirá cómo entrenamos <span aria-hidden="true">→</span></a>
+    </div>
+
+    <div class="philosophy__media" data-reveal>
+      <img
+        src="https://images.unsplash.com/photo-1758875570120-e156041a857a?w=1400&q=80&auto=format&fit=crop"
+        alt="Coach guiando a un atleta en un ejercicio de entrenamiento funcional dentro de IronCore"
+        loading="lazy">
+    </div>
+  </div>
+
+  <div class="philosophy__quote" data-reveal>
+    <p>SIN EXCUSAS.<br>SOLO PROGRESO.</p>
+  </div>
+</section>
+
+<!-- ======================= TRAINING PROGRAMS ======================= -->
+<section class="programs" id="training">
+  <div class="programs__head" data-reveal>
+    <span class="eyebrow">02 — Programas</span>
+    <h2>Entrenamiento hecho<br>a medida de tu objetivo.</h2>
+  </div>
+
+  <div class="programs__list">
+
+    <a href="#membership" class="program" data-reveal>
+      <img src="https://images.unsplash.com/photo-1603665409265-bdc00027c217?w=1200&q=75&auto=format&fit=crop" alt="Barra cargada lista para una sesión de entrenamiento de fuerza" loading="lazy">
+      <div class="program__scrim"></div>
+      <div class="program__content">
+        <span class="program__index">01</span>
+        <h3 class="program__title">Fuerza</h3>
+        <p class="program__desc">Ganá potencia real con fundamentos de barra, sobrecarga progresiva y guía experta.</p>
+      </div>
+    </a>
+
+    <a href="#membership" class="program" data-reveal>
+      <img src="https://images.unsplash.com/photo-1758875569612-94d5e0f1a35f?w=1200&q=75&auto=format&fit=crop" alt="Atleta realizando un movimiento de entrenamiento funcional" loading="lazy">
+      <div class="program__scrim"></div>
+      <div class="program__content">
+        <span class="program__index">02</span>
+        <h3 class="program__title">Entrenamiento Funcional</h3>
+        <p class="program__desc">Patrones de movimiento multiplanares que construyen fuerza y movilidad para la vida real.</p>
+      </div>
+    </a>
+
+    <a href="#membership" class="program" data-reveal>
+      <img src="https://images.unsplash.com/photo-1637430308606-86576d8fef3c?w=1200&q=75&auto=format&fit=crop" alt="Clase de entrenamiento por intervalos de alta intensidad en un gimnasio oscuro" loading="lazy">
+      <div class="program__scrim"></div>
+      <div class="program__content">
+        <span class="program__index">03</span>
+        <h3 class="program__title">HIIT</h3>
+        <p class="program__desc">Intervalos de alta intensidad diseñados para quemar grasa y desarrollar potencia explosiva.</p>
+      </div>
+    </a>
+
+    <a href="#membership" class="program" data-reveal>
+      <img src="https://images.unsplash.com/photo-1648542036561-e1d66a5ae2b1?w=1200&q=75&auto=format&fit=crop" alt="Coach personal trabajando uno a uno con un atleta" loading="lazy">
+      <div class="program__scrim"></div>
+      <div class="program__content">
+        <span class="program__index">04</span>
+        <h3 class="program__title">Coaching Personalizado</h3>
+        <p class="program__desc">Programación uno a uno, hecha a tu objetivo, tu cuerpo y tu ritmo.</p>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ======================= PERFORMANCE ======================= -->
+<section class="performance" id="performance">
+  <img
+    class="performance__bg"
+    src="https://images.unsplash.com/photo-1778828450059-f39d5bbb01af?w=1920&q=70&auto=format&fit=crop"
+    alt=""
+    aria-hidden="true"
+    loading="lazy">
+  <div class="performance__overlay"></div>
+
+  <div class="performance__inner">
+    <div class="performance__head" data-reveal>
+      <span class="eyebrow">03 — Rendimiento</span>
+      <h2>ENTRENÁ CON<br>PROPÓSITO.</h2>
+      <p>Cada sesión en IronCore está construida alrededor de un objetivo real: fuerza ganada, tiempo bajado, una meseta rota. Acá nada es genérico.</p>
+    </div>
+
+    <div class="performance__stats">
+      <div class="stat" data-reveal>
+        <span class="stat__num" data-count="95" data-suffix="%">0%</span>
+        <span class="stat__label">de los socios llegan a su primer objetivo en 90 días</span>
+      </div>
+      <div class="stat" data-reveal>
+        <span class="stat__num" data-count="40" data-suffix="+">0+</span>
+        <span class="stat__label">Clases por semana</span>
+      </div>
+      <div class="stat" data-reveal>
+        <span class="stat__num" data-count="500" data-suffix="+">0+</span>
+        <span class="stat__label">Socios activos</span>
+      </div>
+      <div class="stat" data-reveal>
+        <span class="stat__num" data-count="10" data-suffix="+">0+</span>
+        <span class="stat__label">Años de experiencia en coaching</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= COACHES ======================= -->
+<section class="coaches" id="coaches">
+  <div class="coaches__head" data-reveal>
+    <span class="eyebrow">04 — Coaches</span>
+    <h2>CONOCÉ A TUS<br>COACHES</h2>
+  </div>
+
+  <div class="coaches__list">
+    <article class="coach" data-reveal>
+      <div class="coach__media">
+        <img src="https://images.unsplash.com/photo-1550345332-09e3ac987658?w=900&q=80&auto=format&fit=crop&crop=faces" alt="Retrato del coach Marcus Reed" loading="lazy">
+      </div>
+      <div class="coach__info">
+        <h3>Marcus Reed</h3>
+        <p class="coach__role">Fuerza y Acondicionamiento</p>
+        <p class="coach__years">10+ años de experiencia</p>
+      </div>
+    </article>
+
+    <article class="coach" data-reveal>
+      <div class="coach__media">
+        <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=900&q=80&auto=format&fit=crop&crop=faces" alt="Retrato de la coach Sofía Martínez" loading="lazy">
+      </div>
+      <div class="coach__info">
+        <h3>Sofía Martínez</h3>
+        <p class="coach__role">Entrenamiento Funcional</p>
+        <p class="coach__years">7+ años de experiencia</p>
+      </div>
+    </article>
+
+    <article class="coach" data-reveal>
+      <div class="coach__media">
+        <img src="https://images.unsplash.com/photo-1618566105831-d604c45a7316?w=900&q=80&auto=format&fit=crop&crop=faces" alt="Retrato del coach Ethan Walker" loading="lazy">
+      </div>
+      <div class="coach__info">
+        <h3>Ethan Walker</h3>
+        <p class="coach__role">Coach de Rendimiento</p>
+        <p class="coach__years">9+ años de experiencia</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ======================= TRANSFORMATION ======================= -->
+<section class="transformation" id="transformation">
+  <div class="transformation__grid">
+
+    <div class="transformation__head" data-reveal>
+      <span class="eyebrow">05 — Transformación</span>
+      <h2>TU PROGRESO.<br>TU HISTORIA.</h2>
+    </div>
+
+    <div class="transformation__media" data-reveal>
+      <img src="https://images.unsplash.com/photo-1636302925863-6ad504baaf3c?w=1200&q=80&auto=format&fit=crop" alt="Atleta mostrando foco y determinación durante el entrenamiento" loading="lazy">
+    </div>
+
+    <div class="transformation__quotes">
+
+      <blockquote class="quote" data-reveal>
+        <p>“Me sumé a IronCore hace seis meses. Estoy más fuerte, más seguro y entrenando mejor que nunca.”</p>
+        <footer>
+          <span class="quote__name">Daniel</span>
+          <span class="quote__meta">Socio desde 2025 · +18kg de fuerza total</span>
+        </footer>
+      </blockquote>
+
+      <blockquote class="quote" data-reveal>
+        <p>“El coaching acá es distinto. Cada sesión tiene un propósito y se nota en los resultados.”</p>
+        <footer>
+          <span class="quote__name">Valentina</span>
+          <span class="quote__meta">Socia desde 2024 · −9% de grasa corporal</span>
+        </footer>
+      </blockquote>
+
+      <blockquote class="quote" data-reveal>
+        <p>“Rompí tres récords personales este año. La comunidad me mantiene enfocado.”</p>
+        <footer>
+          <span class="quote__name">Nicolás</span>
+          <span class="quote__meta">Socio desde 2023 · 3 PRs superados</span>
+        </footer>
+      </blockquote>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================= MEMBERSHIP ======================= -->
+<section class="membership" id="membership">
+  <div class="membership__head" data-reveal>
+    <span class="eyebrow">06 — Membresías</span>
+    <h2>ELEGÍ TU<br>NIVEL.</h2>
+  </div>
+
+  <div class="membership__list">
+
+    <div class="plan" data-reveal>
+      <div class="plan__top">
+        <h3 class="plan__name">Inicial</h3>
+        <p class="plan__price"><span>$39</span>/mes</p>
+      </div>
+      <ul class="plan__features">
+        <li>Acceso al gimnasio</li>
+        <li>Vestuarios</li>
+        <li>App de entrenamiento</li>
+      </ul>
+      <a href="#contact" class="btn btn--outline">Sumate Ya</a>
+    </div>
+
+    <div class="plan plan--featured" data-reveal>
+      <span class="plan__badge">El Más Elegido</span>
+      <div class="plan__top">
+        <h3 class="plan__name">Performance</h3>
+        <p class="plan__price"><span>$69</span>/mes</p>
+      </div>
+      <ul class="plan__features">
+        <li>Acceso ilimitado al gimnasio</li>
+        <li>Clases grupales</li>
+        <li>App de entrenamiento</li>
+        <li>Seguimiento de rendimiento</li>
+      </ul>
+      <a href="#contact" class="btn btn--accent">Sumate Ya</a>
+    </div>
+
+    <div class="plan" data-reveal>
+      <div class="plan__top">
+        <h3 class="plan__name">Elite</h3>
+        <p class="plan__price"><span>$119</span>/mes</p>
+      </div>
+      <ul class="plan__features">
+        <li>Todo lo de Performance</li>
+        <li>Coaching personalizado</li>
+        <li>Evaluación mensual</li>
+        <li>Asesoramiento nutricional</li>
+      </ul>
+      <a href="#contact" class="btn btn--outline">Sumate Ya</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ======================= EXPERIENCE ======================= -->
+<section class="experience" id="experience">
+  <div class="experience__head" data-reveal>
+    <span class="eyebrow">07 — Experiencia</span>
+    <h2>ASÍ ES<br>IRONCORE.</h2>
+  </div>
+
+  <div class="experience__gallery">
+    <div class="exp-item exp-item--a" data-reveal>
+      <img src="https://images.unsplash.com/photo-1778828494354-9b717d36dc99?w=1200&q=75&auto=format&fit=crop" alt="Zona de pesas libres y entrenamiento de fuerza" loading="lazy">
+      <span class="exp-item__label">Zona de Fuerza</span>
+    </div>
+    <div class="exp-item exp-item--b" data-reveal>
+      <img src="https://images.unsplash.com/photo-1758875569517-559a631fb44d?w=1000&q=75&auto=format&fit=crop" alt="Área de entrenamiento funcional con espacio abierto" loading="lazy">
+      <span class="exp-item__label">Área Funcional</span>
+    </div>
+    <div class="exp-item exp-item--c" data-reveal>
+      <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?w=1000&q=75&auto=format&fit=crop" alt="Zona de cardio de alta intensidad" loading="lazy">
+      <span class="exp-item__label">Zona de Cardio</span>
+    </div>
+    <div class="exp-item exp-item--d" data-reveal>
+      <img src="https://images.unsplash.com/photo-1766755418405-11af5786d328?w=1000&q=75&auto=format&fit=crop" alt="Vestuarios modernos del gimnasio" loading="lazy">
+      <span class="exp-item__label">Vestuarios</span>
+    </div>
+    <div class="exp-item exp-item--e" data-reveal>
+      <img src="https://images.unsplash.com/photo-1541757089-5ac641ab48cd?w=1200&q=75&auto=format&fit=crop" alt="Atleta haciendo liberación miofascial en la zona de recuperación" loading="lazy">
+      <span class="exp-item__label">Zona de Recuperación</span>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= SCHEDULE ======================= -->
+<section class="schedule" id="schedule">
+  <div class="schedule__head" data-reveal>
+    <span class="eyebrow">08 — Horarios</span>
+    <h2>ENTRENÁ CUANDO<br>QUERÉS.</h2>
+  </div>
+
+  <div class="schedule__table" data-reveal>
+
+    <div class="schedule__row schedule__row--head">
+      <span class="schedule__day">Día</span>
+      <span class="schedule__classes">Clases</span>
+    </div>
+
+    <div class="schedule__row">
+      <span class="schedule__day">Lunes</span>
+      <span class="schedule__classes">
+        <span class="pill">Fuerza · 06:00</span>
+        <span class="pill">HIIT · 12:00</span>
+        <span class="pill">Entrenamiento Funcional · 18:00</span>
+      </span>
+    </div>
+
+    <div class="schedule__row">
+      <span class="schedule__day">Martes</span>
+      <span class="schedule__classes">
+        <span class="pill">Movilidad · 07:00</span>
+        <span class="pill">Rendimiento · 17:00</span>
+        <span class="pill">HIIT · 19:00</span>
+      </span>
+    </div>
+
+    <div class="schedule__row">
+      <span class="schedule__day">Miércoles</span>
+      <span class="schedule__classes">
+        <span class="pill">Fuerza · 06:00</span>
+        <span class="pill">Entrenamiento Funcional · 12:00</span>
+        <span class="pill">Rendimiento · 18:00</span>
+      </span>
+    </div>
+
+    <div class="schedule__row">
+      <span class="schedule__day">Jueves</span>
+      <span class="schedule__classes">
+        <span class="pill">HIIT · 07:00</span>
+        <span class="pill">Movilidad · 12:00</span>
+        <span class="pill">Fuerza · 18:00</span>
+      </span>
+    </div>
+
+    <div class="schedule__row">
+      <span class="schedule__day">Viernes</span>
+      <span class="schedule__classes">
+        <span class="pill">Entrenamiento Funcional · 06:00</span>
+        <span class="pill">Rendimiento · 12:00</span>
+        <span class="pill">HIIT · 17:00</span>
+      </span>
+    </div>
+
+    <div class="schedule__row">
+      <span class="schedule__day">Sábado</span>
+      <span class="schedule__classes">
+        <span class="pill">Fuerza · 08:00</span>
+        <span class="pill">Movilidad · 10:00</span>
+      </span>
+    </div>
+
+    <div class="schedule__row">
+      <span class="schedule__day">Domingo</span>
+      <span class="schedule__classes">
+        <span class="pill">Entrenamiento Funcional · 09:00</span>
+        <span class="pill">Rendimiento · 11:00</span>
+      </span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ======================= FINAL CTA ======================= -->
+<section class="final-cta" id="contact">
+  <div class="final-cta__media">
+    <img
+      src="https://images.unsplash.com/photo-1774864040225-867c8806d78e?w=1920&q=75&auto=format&fit=crop"
+      alt="Vista dramática de la sala de entrenamiento de IronCore Performance"
+      loading="lazy">
+    <div class="final-cta__overlay"></div>
+  </div>
+
+  <div class="final-cta__content" data-reveal>
+    <h2>LA VERSIÓN MÁS FUERTE<br>DE VOS EMPIEZA ACÁ.</h2>
+    <p>Tu primera clase corre por nuestra cuenta.</p>
+    <a href="#" class="btn btn--accent btn--lg">Reservá tu Clase Gratis</a>
+    <span class="final-cta__note">Sin contratos. Sin presión. Solo entrenamiento.</span>
+  </div>
+</section>
+
+</main>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="footer">
+  <div class="footer__top">
+
+    <div class="footer__brand">
+      <a href="#home" class="footer__logo">IRON<span>CORE</span></a>
+      <p>Entrenamiento de alto rendimiento pensado para hacerte más fuerte, más rápido y más capaz.</p>
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+        <a href="#" aria-label="TikTok">TikTok</a>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h4>Enlaces</h4>
+      <a href="#training">Entrenamiento</a>
+      <a href="#coaches">Coaches</a>
+      <a href="#membership">Membresías</a>
+      <a href="#contact">Contacto</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Visitanos</h4>
+      <p>Av. Rendimiento 1250<br>Palermo, Buenos Aires</p>
+      <p>Lun–Vie 5:00–23:00<br>Sáb–Dom 7:00–21:00</p>
+    </div>
+
+    <div class="footer__col footer__newsletter">
+      <h4>Recibí Tips de Entrenamiento</h4>
+      <p>Notas de coaching y novedades de programas, una vez por mes.</p>
+      <form class="footer__form" id="newsletterForm">
+        <label for="newsletterEmail" class="sr-only">Correo electrónico</label>
+        <input type="email" id="newsletterEmail" placeholder="Tu correo electrónico" required>
+        <button type="submit" aria-label="Suscribirse">→</button>
+      </form>
+      <p class="footer__form-msg" id="newsletterMsg" role="status"></p>
+    </div>
+
+  </div>
+
+  <div class="footer__bottom">
+    <span>© <span id="year"></span> IronCore Performance. Todos los derechos reservados.</span>
+    <div class="footer__legal">
+      <a href="#">Política de Privacidad</a>
+      <a href="#">Términos de Servicio</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
