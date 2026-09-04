@@ -145,13 +145,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const startRender = () => { if (!raf) raf = requestAnimationFrame(render); };
 
-    hero.addEventListener('pointermove', (e) => {
+    const onMove = (e) => {
       const rect = hero.getBoundingClientRect();
       targetX = ((e.clientX - rect.left) / rect.width) * 100;
       targetY = ((e.clientY - rect.top) / rect.height) * 100;
       hero.classList.add('is-smoking');
       startRender();
-    });
+    };
+
+    /* pointermove covers modern browsers; mousemove is a belt-and-suspenders
+       fallback for any input stack that doesn't dispatch pointer events */
+    hero.addEventListener('pointermove', onMove);
+    hero.addEventListener('mousemove', onMove);
 
     hero.addEventListener('pointerleave', () => {
       hero.classList.remove('is-smoking');
