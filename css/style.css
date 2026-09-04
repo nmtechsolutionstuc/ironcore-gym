@@ -1083,6 +1083,7 @@ body.nav-open .mobile-nav__cta{ opacity: 1; transform: translateY(0); }
   [data-reveal]{ opacity: 1; transform: none; }
   .hero__headline .word{ opacity: 1; transform: none; }
   .hero__subtext, .hero__ctas, .hero__stats{ opacity: 1; transform: none; }
-  .hero__video--fx{ display: none; }
-  #smokeTurbulence animate{ display: none; }
+  /* the smoke warp itself stays enabled — it only ever moves when the user
+     moves their own cursor, the ambient auto-loop is what gets removed
+     (via JS, deleting the <animate> tag on #smokeTurbulence) */
 }

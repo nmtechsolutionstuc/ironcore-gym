@@ -127,7 +127,11 @@ document.addEventListener('DOMContentLoaded', () => {
     smokeTurbulence.querySelectorAll('animate').forEach(a => a.remove());
   }
 
-  if (hero && heroMedia && canHover && !prefersReducedMotion) {
+  /* The ambient turbulence loop respects prefers-reduced-motion (removed
+     above), but the warp itself only ever moves in direct response to the
+     user's own cursor — so we keep that interactive part enabled even
+     under reduced motion, rather than hiding the effect entirely. */
+  if (hero && heroMedia && canHover) {
     let targetX = 50, targetY = 40, currentX = 50, currentY = 40;
     let raf = null;
 
