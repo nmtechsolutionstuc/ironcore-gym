@@ -62,13 +62,32 @@
 
 <!-- ======================= HERO ======================= -->
 <section class="hero" id="home">
-  <div class="hero__media">
-    <img
-      src="https://images.unsplash.com/photo-1770513649465-2c60c8039806?w=1920&q=80&auto=format&fit=crop"
-      alt="Atleta completando un levantamiento pesado de barra dentro de un gimnasio oscuro de alto rendimiento"
-      class="hero__img"
+
+  <svg class="hero__filter-defs" aria-hidden="true" focusable="false">
+    <filter id="smokeDistort" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feTurbulence id="smokeTurbulence" type="fractalNoise" baseFrequency="0.008 0.02" numOctaves="3" seed="7" stitchTiles="stitch" result="noise">
+        <animate attributeName="baseFrequency" dur="22s" values="0.008 0.02;0.014 0.028;0.008 0.02" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="90" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
+
+  <div class="hero__media" id="heroMedia">
+    <video
+      class="hero__video"
       id="heroImg"
-      fetchpriority="high">
+      poster="assets/img/hero-poster.jpg"
+      autoplay muted loop playsinline preload="auto"
+      aria-hidden="true">
+      <source src="assets/video/hero-bg.mp4" type="video/mp4">
+    </video>
+    <video
+      class="hero__video hero__video--fx"
+      poster="assets/img/hero-poster.jpg"
+      autoplay muted loop playsinline preload="auto"
+      aria-hidden="true">
+      <source src="assets/video/hero-bg.mp4" type="video/mp4">
+    </video>
     <div class="hero__overlay"></div>
     <div class="hero__grain"></div>
   </div>

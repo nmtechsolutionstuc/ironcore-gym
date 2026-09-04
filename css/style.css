@@ -291,13 +291,35 @@ body.nav-open .mobile-nav__cta{ opacity: 1; transform: translateY(0); }
   overflow: hidden;
   padding: 120px var(--pad) 72px;
 }
-.hero__media{ position: absolute; inset: 0; z-index: 0; }
-.hero__img{
+.hero__media{ position: absolute; inset: 0; z-index: 0; --mx: 50%; --my: 40%; }
+
+.hero__filter-defs{ position: absolute; width: 0; height: 0; overflow: hidden; }
+
+.hero__video{
+  position: absolute; inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;
   transform: scale(1.12);
   will-change: transform;
+  background: var(--black);
 }
+
+/* "Warped smoke" layer — identical footage, distorted through an SVG
+   turbulence/displacement filter, revealed only inside a soft circle
+   that follows the cursor. Static + hidden until the pointer arrives. */
+.hero__video--fx{
+  filter: url(#smokeDistort) saturate(1.5) brightness(1.2) contrast(1.05);
+  -webkit-mask-image: radial-gradient(circle 260px at var(--mx) var(--my), rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0) 72%);
+  mask-image: radial-gradient(circle 260px at var(--mx) var(--my), rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0) 72%);
+  opacity: 0;
+  transition: opacity .5s var(--ease-soft);
+}
+.hero.is-smoking .hero__video--fx{ opacity: 1; }
+
+@media (hover: none){
+  .hero__video--fx{ display: none; }
+}
+
 .hero__overlay{
   position: absolute; inset: 0;
   background:
@@ -1061,4 +1083,6 @@ body.nav-open .mobile-nav__cta{ opacity: 1; transform: translateY(0); }
   [data-reveal]{ opacity: 1; transform: none; }
   .hero__headline .word{ opacity: 1; transform: none; }
   .hero__subtext, .hero__ctas, .hero__stats{ opacity: 1; transform: none; }
+  .hero__video--fx{ display: none; }
+  #smokeTurbulence animate{ display: none; }
 }

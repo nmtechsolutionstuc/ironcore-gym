@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-    tl.to('#heroImg', { scale: 1, duration: 1.8, ease: 'power2.out' }, 0)
+    tl.to('.hero__video', { scale: 1, duration: 1.8, ease: 'power2.out' }, 0)
       .to('.hero__headline .word', {
         y: 0,
         opacity: 1,
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* Subtle hero image drift while in view */
-    gsap.to('#heroImg', {
+    gsap.to('.hero__video', {
       yPercent: 6,
       ease: 'none',
       scrollTrigger: {
@@ -110,6 +110,51 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.hero__subtext, .hero__ctas, .hero__stats').forEach(el => {
       el.style.transform = 'none';
       el.style.opacity = '1';
+    });
+  }
+
+  /* ---------- 3b. HERO SMOKE — cursor-revealed warp ----------
+     A second copy of the hero video sits on top of the first, run through
+     an SVG turbulence/displacement filter (#smokeDistort). It's masked to a
+     soft circle that follows the pointer, so only the smoke right under the
+     cursor "ripples" — like disturbing it with your hand. */
+  const hero = document.querySelector('.hero');
+  const heroMedia = document.getElementById('heroMedia');
+  const smokeTurbulence = document.getElementById('smokeTurbulence');
+  const canHover = window.matchMedia('(hover: hover)').matches;
+
+  if (prefersReducedMotion && smokeTurbulence) {
+    smokeTurbulence.querySelectorAll('animate').forEach(a => a.remove());
+  }
+
+  if (hero && heroMedia && canHover && !prefersReducedMotion) {
+    let targetX = 50, targetY = 40, currentX = 50, currentY = 40;
+    let raf = null;
+
+    const render = () => {
+      currentX += (targetX - currentX) * 0.14;
+      currentY += (targetY - currentY) * 0.14;
+      heroMedia.style.setProperty('--mx', currentX + '%');
+      heroMedia.style.setProperty('--my', currentY + '%');
+      if (Math.abs(targetX - currentX) > 0.05 || Math.abs(targetY - currentY) > 0.05) {
+        raf = requestAnimationFrame(render);
+      } else {
+        raf = null;
+      }
+    };
+
+    const startRender = () => { if (!raf) raf = requestAnimationFrame(render); };
+
+    hero.addEventListener('pointermove', (e) => {
+      const rect = hero.getBoundingClientRect();
+      targetX = ((e.clientX - rect.left) / rect.width) * 100;
+      targetY = ((e.clientY - rect.top) / rect.height) * 100;
+      hero.classList.add('is-smoking');
+      startRender();
+    });
+
+    hero.addEventListener('pointerleave', () => {
+      hero.classList.remove('is-smoking');
     });
   }
 
