@@ -309,8 +309,8 @@ body.nav-open .mobile-nav__cta{ opacity: 1; transform: translateY(0); }
    that follows the cursor. Static + hidden until the pointer arrives. */
 .hero__video--fx{
   filter: url(#smokeDistort) saturate(1.5) brightness(1.2) contrast(1.05);
-  -webkit-mask-image: radial-gradient(circle 260px at var(--mx) var(--my), rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0) 72%);
-  mask-image: radial-gradient(circle 260px at var(--mx) var(--my), rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0) 72%);
+  -webkit-mask-image: radial-gradient(circle 130px at var(--mx) var(--my), rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0) 72%);
+  mask-image: radial-gradient(circle 130px at var(--mx) var(--my), rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0) 72%);
   opacity: 0;
   transition: opacity .5s var(--ease-soft);
 }

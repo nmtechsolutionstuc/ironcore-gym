@@ -136,8 +136,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let raf = null;
 
     const render = () => {
-      currentX += (targetX - currentX) * 0.14;
-      currentY += (targetY - currentY) * 0.14;
+      currentX += (targetX - currentX) * 0.22;
+      currentY += (targetY - currentY) * 0.22;
       heroMedia.style.setProperty('--mx', currentX + '%');
       heroMedia.style.setProperty('--my', currentY + '%');
       if (Math.abs(targetX - currentX) > 0.05 || Math.abs(targetY - currentY) > 0.05) {
